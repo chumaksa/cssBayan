@@ -25,7 +25,7 @@ input[type="checkbox"] {
   padding: 1em 0;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid lightgrey;
+  border-top: solid lightgrey;
   color: blue;
   transition: color 0.4s;
 }

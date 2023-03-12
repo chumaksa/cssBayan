@@ -1,6 +1,6 @@
 .container {
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 1em;
   font-size: 0.67rem;
 }
 
@@ -58,3 +58,53 @@ input[type="checkbox"]:checked ~ .bayan__label {
   color: initial;
 }
 
+@media screen and (min-width: 430px) {
+  .container {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    font-size: 1.5rem;
+    max-width: 56vw;
+  }
+}
+
+@media (hover: hover) {
+  .bayan__icon {
+    opacity: 0;
+  }
+  .bayan:hover .bayan__icon {
+    opacity: 1;
+  }
+  .bayan:hover .bayan__label {
+    color: initial;
+  }
+  .bayan:hover .bayan__tab,
+  .bayan:hover .bayan__label {
+    cursor: pointer;
+  }
+  .bayan__tab:hover .bayan__icon {
+    transform: rotate(45deg);
+  }
+  .bayan__tab:hover .bayan__content,
+  .bayan__tab:focus .bayan__content {
+    max-height: 100vh;
+  }
+  .bayan__tab:focus .bayan__label {
+    color: initial;
+  }
+  .bayan__tab:active {
+    opacity: 0.7;
+  }
+  .bayan__tab:active > .bayan__label {
+    color: blue !important;
+  }
+}

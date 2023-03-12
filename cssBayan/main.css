@@ -1,6 +1,11 @@
 .container {
-  width: 80vw;
   margin: 0 auto;
+  padding: 0 1em;
+  font-size: 0.67rem;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 input[type="checkbox"] {
@@ -11,24 +16,45 @@ input[type="checkbox"] {
 
 .bayan__tab {
   overflow: hidden;
-}
-
-.bayan__tab:hover > .bayan__content {
-  max-height: 100vh;
-  padding: 50px 0;
+  transition: all 0.4s;
 }
 
 .bayan__label {
+  font-size: 1.8em;
+  font-weight: bold;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid lightgrey;
+  color: blue;
+  transition: color 0.4s;
+}
+
+.bayan__icon {
+  transition: all 0.4s;
+}
+
+input[type="checkbox"]:checked ~ .bayan__label .bayan__icon {
+  transform: rotate(45deg);
 }
 
 .bayan__content {
   max-height: 0;
-  padding: 0;
   transition: all 0.4s;
-  background-color: red;
+}
+
+.bayan__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 1.8em;
 }
 
 input[type="checkbox"]:checked ~ .bayan__content {
   max-height: 100vh;
-  padding: 50px 0;
 }
+
+input[type="checkbox"]:checked ~ .bayan__label {
+  color: initial;
+}
+
